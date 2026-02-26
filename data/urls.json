@@ -1,0 +1,3602 @@
+[
+  {
+    "url": "https://jiekou.ai/",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "1.0"
+  },
+  {
+    "url": "https://jiekou.ai/pricing",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "0.9"
+  },
+  {
+    "url": "https://docs.jiekou.ai",
+    "source": "sitemap",
+    "category": {
+      "type": "docs",
+      "subcategory": "general"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "0.9"
+  },
+  {
+    "url": "https://jiekou.ai/legal/terms-of-service",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "legal"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "0.6"
+  },
+  {
+    "url": "https://jiekou.ai/legal/privacy-policy",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "legal"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "0.6"
+  },
+  {
+    "url": "https://jiekou.ai/user/login",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2025-09-28",
+    "priority": "0.5"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-next-80b-a3b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-next-80b-a3b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.242Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-next-80b-a3b-thinking",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-next-80b-a3b-thinking"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-haiku-4-5-20251001",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-haiku-4-5-20251001"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-sonnet-4-5-20250929",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-sonnet-4-5-20250929"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/moonshotai-kimi-k2-0905",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "moonshotai-kimi-k2-0905"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/deepseek-deepseek-v3.1",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "deepseek-deepseek-v3.1"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-coder-480b-a35b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-coder-480b-a35b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/openai-gpt-oss-120b",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "openai-gpt-oss-120b"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-3-7-sonnet-20250219",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-3-7-sonnet-20250219"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-sonnet-4-20250514",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-sonnet-4-20250514"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/zai-org-glm-4.5",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "zai-org-glm-4.5"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-opus-4-20250514",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-opus-4-20250514"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-opus-4-1-20250805",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-opus-4-1-20250805"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-235b-a22b-thinking-2507",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-235b-a22b-thinking-2507"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/meta-llama-llama-3.1-8b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "meta-llama-llama-3.1-8b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5-codex",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5-codex"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/google-gemma-3-12b-it",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "google-gemma-3-12b-it"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/zai-org-glm-4.5v",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "zai-org-glm-4.5v"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/openai-gpt-oss-20b",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "openai-gpt-oss-20b"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-flash",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-flash"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-235b-a22b-instruct-2507",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-235b-a22b-instruct-2507"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/meta-llama-llama-3.3-70b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "meta-llama-llama-3.3-70b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen-2.5-72b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen-2.5-72b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/mistralai-mistral-nemo",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "mistralai-mistral-nemo"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-pro",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-pro"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/minimaxai-minimax-m1-80k",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "minimaxai-minimax-m1-80k"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/deepseek-deepseek-r1-0528",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "deepseek-deepseek-r1-0528"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/mistralai-mistral-7b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "mistralai-mistral-7b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-235b-a22b-fp8",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-235b-a22b-fp8"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5-nano",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5-nano"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/meta-llama-llama-4-maverick-17b-128e-instruct-fp8",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "meta-llama-llama-4-maverick-17b-128e-instruct-fp8"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/meta-llama-llama-4-scout-17b-16e-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "meta-llama-llama-4-scout-17b-16e-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen2.5-vl-72b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen2.5-vl-72b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/sao10k-l3-70b-euryale-v2.1",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "sao10k-l3-70b-euryale-v2.1"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5-pro",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5-pro"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/sao10k-l3-8b-lunaris",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "sao10k-l3-8b-lunaris"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/baichuan-baichuan-m2-32b",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "baichuan-baichuan-m2-32b"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/thudm-glm-4.1v-9b-thinking",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "thudm-glm-4.1v-9b-thinking"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/baidu-ernie-4.5-vl-424b-a47b",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "baidu-ernie-4.5-vl-424b-a47b"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/baidu-ernie-4.5-300b-a47b-paddle",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "baidu-ernie-4.5-300b-a47b-paddle"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-32b-fp8",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-32b-fp8"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-30b-a3b-fp8",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-30b-a3b-fp8"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/google-gemma-3-27b-it",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "google-gemma-3-27b-it"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/Sao10K-L3-8B-Stheno-v3.2",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "Sao10K-L3-8B-Stheno-v3.2"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gryphe-mythomax-l2-13b",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gryphe-mythomax-l2-13b"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/moonshotai-kimi-k2-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "moonshotai-kimi-k2-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/deepseek-deepseek-v3-0324",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "deepseek-deepseek-v3-0324"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-code-fast-1",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-code-fast-1"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-3-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-3-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-4-fast-reasoning",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-4-fast-reasoning"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-4-fast-non-reasoning",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-4-fast-non-reasoning"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-flash-lite-preview-09-2025",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-flash-lite-preview-09-2025"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen-mt-plus",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen-mt-plus"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/o4-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "o4-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-5-chat-latest",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-5-chat-latest"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-3",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-3"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.0-flash-lite",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.0-flash-lite"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-flash-lite",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-flash-lite"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/grok-4-0709",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "grok-4-0709"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-3-5-sonnet-20241022",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-3-5-sonnet-20241022"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-flash-lite-preview-06-17",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-flash-lite-preview-06-17"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-4.1-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-4.1-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-4.1-nano",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-4.1-nano"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-4.1",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-4.1"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-flash-preview-05-20",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-flash-preview-05-20"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.5-pro-preview-06-05",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.5-pro-preview-06-05"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gemini-2.0-flash-20250609",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gemini-2.0-flash-20250609"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-3-haiku-20240307",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-3-haiku-20240307"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/claude-3-5-haiku-20241022",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "claude-3-5-haiku-20241022"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/o3",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "o3"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/o3-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "o3-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/o1-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "o1-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/o1",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "o1"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-4o-mini",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-4o-mini"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/gpt-4o",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "gpt-4o"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen3-8b-fp8",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen3-8b-fp8"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/qwen-qwen2.5-7b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "qwen-qwen2.5-7b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/meta-llama-llama-3.2-3b-instruct",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "meta-llama-llama-3.2-3b-instruct"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/model-detail/sao10k-l31-70b-euryale-v2.2",
+    "source": "sitemap",
+    "category": {
+      "type": "models",
+      "model_name": "sao10k-l31-70b-euryale-v2.2"
+    },
+    "lastmod": "2025-10-22T09:29:08.243Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.497Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q3-pro-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q3-pro-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/minimax/minimax-speech-2.8-turbo-async",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/minimax/minimax-speech-2.8-hd-async",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/minimax/minimax-speech-2.8-turbo",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/minimax/minimax-speech-2.8-hd",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan2.2-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan2.2-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan-2.5-i2v-preview",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan-2.5-t2v-preview",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/gemini-image",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wavespeed/heygen-video-translate",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-template2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/智谱/glm-image",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-pro-fast-img2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-pro-fast-startend2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-pro-img2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-pro-multiframe",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-pro-startend2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-reference2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-text2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-turbo-img2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-turbo-multiframe",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/vidu/vidu-q2-turbo-startend2video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-v2.6-pro-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-v2.6-pro-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-v2.6-pro-motion-control",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/nano-banana-light-t2i",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/nano-banana-light-i2i",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/gemini-2.5-flash-image-edit",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/gemini-2.5-flash-image-text-to-image",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/gemini-3-pro-image-edit",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/gemini-3-pro-image-text-to-image",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/bytedance/seedance-1.5-pro-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/bytedance/seedance-1.5-pro-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/bytedance/seedream-4.5",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/智谱/glm-tts-clone",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/智谱/glm-asr",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/智谱/glm-tts",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/qwen/z-image-turbo-lora",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/qwen/z-image-turbo",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/veo-3.1-reverse",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-flash-v2_5-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-flash-v2-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-multilingual-v2-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-scribe-v1-speech-to-text",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-scribe-v2-speech-to-text",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-turbo-v2_5-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-turbo-v2-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-v3-text-to-speech",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/elevenlabs/elevenlabs-voice-cloning",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan2.6-v2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan2.6-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/wan/wan2.6-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/tools/image-remove-background",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/tools/image-upscaler",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/tools/image-eraser",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-o1-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-o1-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-o1-reference-video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/kling/kling-o1-edit-video",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/nano-banana-pro-light-i2i",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/google/nano-banana-pro-light-t2i",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/sora/sora-2-i2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/sora/sora-2-t2v",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/flux/flux-2-pro",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/flux/flux-2-flex",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://jiekou.ai/models/flux/flux-2-dev",
+    "source": "sitemap",
+    "category": {
+      "type": "pages",
+      "subcategory": "main"
+    },
+    "lastmod": "2026-02-12T08:53:26.498Z",
+    "priority": "0.7"
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/announcement/announcement.md",
+    "title": "官方公告📢",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "announcement"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/chat-mode.md",
+    "title": "Chat 模式",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/files.md",
+    "title": "文件管理",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/git-integration.md",
+    "title": "Git 集成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/introduction.md",
+    "title": "Cloud Code 介绍",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/project.md",
+    "title": "项目管理",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/quickstart.md",
+    "title": "快速上手指南",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/session.md",
+    "title": "会话管理",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/cc/shell-mode.md",
+    "title": "Shell 模式",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "cc"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/feature/prompt-caching.md",
+    "title": "Prompt caching",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "feature"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/chatbox.md",
+    "title": "Chatbox",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/claudecode.md",
+    "title": "Claude Code",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/codex.md",
+    "title": "OpenAI Codex CLI",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/deepchat.md",
+    "title": "DeepChat",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/deepsearcher.md",
+    "title": "DeepSearcher",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/langbot.md",
+    "title": "LangBot",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/opencode.md",
+    "title": "OpenCode",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/openmanus.md",
+    "title": "OpenManus",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/integration/ragflow.md",
+    "title": "RAGFlow",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "integration"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/inference.md",
+    "title": "推理模型",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm.md",
+    "title": "大语言模型",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-anthropic-compatibility.md",
+    "title": "兼容 Anthropic SDK",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-api-metrics.md",
+    "title": "大语言模型监控",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-function-calling.md",
+    "title": "工具调用（Function Calling）",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-rate-limits.md",
+    "title": "调用频率控制（Rate Limits）",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-recommended.md",
+    "title": "推荐模型",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/llm-structured-outputs.md",
+    "title": "结构化输出（Structured Outputs）",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/overview.md",
+    "title": "介绍",
+    "description": "如何开始使用 JieKou.AI 模型服务",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/model/visual.md",
+    "title": "视觉语言模型",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "model"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-authentication.md",
+    "title": "API 鉴权方式",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-edits.md",
+    "title": "GPT 图像编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-scribe-v1.md",
+    "title": "ElevenLabs 语音转文本 V1",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-scribe-v2.md",
+    "title": "ElevenLabs 语音转文本 V2",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-flash-v2.md",
+    "title": "ElevenLabs 文字转语音 Flash V2",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-flash-v2.5.md",
+    "title": "ElevenLabs 文字转语音 Flash V2.5",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-multilingual-v2.md",
+    "title": "ElevenLabs 文字转语音 Multilingual V2",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-turbo-v2.md",
+    "title": "ElevenLabs 文字转语音 Turbo v2",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-turbo-v2.5.md",
+    "title": "ElevenLabs 文字转语音 Turbo V2.5",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-tts-v3.md",
+    "title": "ElevenLabs 文字转语音 V3",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-elevenlabs-voice-clone.md",
+    "title": "ElevenLabs 音频快速复刻",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-error-code.md",
+    "title": "API 错误码说明",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-fish-audio-txt2speech.md",
+    "title": "Fish Audio 语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-fish-audio-voice-cloning.md",
+    "title": "Fish Audio 音频复刻",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-1-kontext-dev.md",
+    "title": "FLUX.1 Kontext Dev",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-1-kontext-max.md",
+    "title": "FLUX.1 Kontext Max",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-1-kontext-pro.md",
+    "title": "FLUX.1 Kontext Pro",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-2-dev.md",
+    "title": "Flux 2 Dev 生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-2-flex.md",
+    "title": "Flux 2 Flex 生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-flux-2-pro.md",
+    "title": "Flux 2 Pro 生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-gemini-2.5-flash-image-edit.md",
+    "title": "Gemini 2.5 Flash Image 图片编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-gemini-2.5-flash-image-text-to-image.md",
+    "title": "Gemini 2.5 Flash Image 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-gemini-3-pro-image-edit.md",
+    "title": "Gemini 3 Pro Image Preview 图片编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-gemini-3-pro-image-text-to-image.md",
+    "title": "Gemini 3 Pro Image Preview 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-generations.md",
+    "title": "GPT 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-get-async-task-result.md",
+    "title": "查询任务结果",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-get-bill-pay-as-you-model.md",
+    "title": "查询账单",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-glm-asr.md",
+    "title": "GLM 音频转文字",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-glm-image.md",
+    "title": "GLM 图像生成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-glm-tts.md",
+    "title": "GLM 语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-glm-tts-voice-clone.md",
+    "title": "GLM 音频复刻",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-grok-imagine-image-edit.md",
+    "title": "Grok Imagine Image 图片编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-grok-imagine-image-t2i.md",
+    "title": "Grok Imagine Image 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-grok-imagine-video-edit.md",
+    "title": "Grok Imagine Video 视频编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-grok-imagine-video-i2v.md",
+    "title": "Grok Imagine Video 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-grok-imagine-video-t2v.md",
+    "title": "Grok Imagine Video 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-heygen-video-translate.md",
+    "title": "Heygen Video-translate",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-hunyuan-image-3.md",
+    "title": "Hunyuan Image 3",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-hunyuan-video-fast.md",
+    "title": "Hunyuan 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-image-eraser.md",
+    "title": "图像擦除",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-image-remove-background.md",
+    "title": "图像背景移除",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-image-upscaler.md",
+    "title": "图像高清化",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-2.5-turbo-i2v.md",
+    "title": "Kling V2.5 Turbo 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-2.5-turbo-t2v.md",
+    "title": "Kling V2.5 Turbo 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-o1-i2v.md",
+    "title": "Kling-o1 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-o1-ref2v.md",
+    "title": "Kling-o1 参考生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-o1-t2v.md",
+    "title": "Kling-o1 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-o1-video-edit.md",
+    "title": "Kling-o1 视频编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v1.6-i2v.md",
+    "title": "KLING V1.6 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v1.6-t2v.md",
+    "title": "KLING V1.6 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.1-i2v.md",
+    "title": "Kling V2.1 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.1-i2v-master.md",
+    "title": "Kling V2.1 Master 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.1-t2v-master.md",
+    "title": "Kling V2.1 Master 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.6-pro-i2v.md",
+    "title": "Kling V2.6 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.6-pro-motion-control.md",
+    "title": "Kling V2.6 Pro 动作控制",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v2.6-pro-t2v.md",
+    "title": "Kling V2.6 Pro 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v3.0-pro-i2v.md",
+    "title": "Kling V3.0 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v3.0-pro-t2v.md",
+    "title": "Kling V3.0 Pro 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v3.0-std-i2v.md",
+    "title": "Kling V3.0 Standard 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-kling-v3.0-std-t2v.md",
+    "title": "Kling V3.0 Standard 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-create-chat-completion.md",
+    "title": "创建聊天对话请求",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-create-completion.md",
+    "title": "创建对话请求",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-create-embeddings.md",
+    "title": "创建嵌入向量",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-create-rerank.md",
+    "title": "创建重排序",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-list-models.md",
+    "title": "获取模型列表",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-llm-retrieve-model.md",
+    "title": "获取指定模型信息",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-hailuo-02.md",
+    "title": "Minimax Hailuo-02",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-hailuo-2.3-fast-i2v.md",
+    "title": "Minimax Hailuo 2.3 Fast 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-hailuo-2.3-i2v.md",
+    "title": "Minimax Hailuo 2.3 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-hailuo-2.3-t2v.md",
+    "title": "Minimax Hailuo 2.3 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-02-hd.md",
+    "title": "MiniMax Speech-02-hd 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-02-hd-async.md",
+    "title": "MiniMax Speech-02-hd 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-02-turbo.md",
+    "title": "MiniMax Speech-02-turbo 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-02-turbo-async.md",
+    "title": "MiniMax Speech-02-turbo 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.5-hd-preview.md",
+    "title": "MiniMax Speech-2.5-hd-preview 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.5-hd-preview-async.md",
+    "title": "MiniMax Speech-2.5-hd-preview 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.5-turbo-preview.md",
+    "title": "MiniMax Speech-2.5-turbo-preview 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.5-turbo-preview-async.md",
+    "title": "MiniMax Speech-2.5-turbo-preview 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.6-hd.md",
+    "title": "MiniMax Speech-2.6-hd 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.6-hd-async.md",
+    "title": "MiniMax Speech-2.6-hd 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.6-turbo.md",
+    "title": "MiniMax Speech-2.6-turbo 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.6-turbo-async.md",
+    "title": "MiniMax Speech-2.6-turbo 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.8-hd.md",
+    "title": "MiniMax Speech 2.8 HD 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.8-hd-async.md",
+    "title": "MiniMax Speech 2.8 HD 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.8-turbo.md",
+    "title": "MiniMax Speech 2.8 Turbo 同步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-speech-2.8-turbo-async.md",
+    "title": "MiniMax Speech 2.8 Turbo 异步语音合成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-video-01.md",
+    "title": "Minimax Video-01",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-minimax-voice-cloning.md",
+    "title": "MiniMax 音频快速复刻",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-inpaint.md",
+    "title": "Midjourney 区域重绘",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-outpaint.md",
+    "title": "Midjourney 扩图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-remix.md",
+    "title": "Midjourney 重塑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-remove-background.md",
+    "title": "Midjourney 移除背景",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-reroll.md",
+    "title": "Midjourney 重新执行",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-txt2img.md",
+    "title": "Midjourney 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-upscale.md",
+    "title": "Midjourney 高清",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-mj-variation.md",
+    "title": "Midjourney 变化",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-nano-banana-light-i2i.md",
+    "title": "Nano Banana Light 图生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-nano-banana-light-t2i.md",
+    "title": "Nano Banana Light 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-nano-banana-pro-light-i2i.md",
+    "title": "Nano Banana Pro Light 图生图 (reverse)",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-nano-banana-pro-light-t2i.md",
+    "title": "Nano Banana Pro Light 文生图 (reverse)",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-pixverse-v4.5-i2v.md",
+    "title": "PixVerse V4.5 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-pixverse-v4.5-t2v.md",
+    "title": "PixVerse V4.5 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-qwen-image-edit.md",
+    "title": "Qwen-Image 图像编辑",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-qwen-image-txt2img.md",
+    "title": "Qwen-Image 文生图",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1-lite-i2v.md",
+    "title": "Seedance V1 Lite图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1-lite-t2v.md",
+    "title": "Seedance V1 Lite 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1-pro-i2v.md",
+    "title": "Seedance V1 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1-pro-t2v.md",
+    "title": "Seedance V1 Pro 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1.5-pro-i2v.md",
+    "title": "Seedance 1.5 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedance-v1.5-pro-t2v.md",
+    "title": "Seedance 1.5 Pro 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedream-3-0-txt2img.md",
+    "title": "Seedream 文生图 3.0",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedream-4.0.md",
+    "title": "Seedream 图片生成 4.0",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedream-4.5.md",
+    "title": "Seedream 图片生成 4.5",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-seedream-5.0-lite.md",
+    "title": "Seedream  5.0 lite",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-sora-2-img2video.md",
+    "title": "OpenAI Sora 2 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-sora-2-remix-reverse.md",
+    "title": "OpenAI Sora 2 (reverse) 编辑视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-sora-2-text2video.md",
+    "title": "OpenAI Sora 2 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-sora-2-video-reverse.md",
+    "title": "OpenAI Sora 2 (reverse) 生成视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-unified-video-generation.md",
+    "title": "视频生成通用接口",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.0-generate-001-text2video.md",
+    "title": "Veo 3.0 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.0-generate-preview-img2video.md",
+    "title": "Veo 3.0 Preview 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.0-generate-preview-text2video.md",
+    "title": "Veo 3.0 Preview 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.1-fast-generate-img2video.md",
+    "title": "Veo 3.1 Fast 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.1-fast-generate-text2video.md",
+    "title": "Veo 3.1 Fast 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.1-generate-img2video.md",
+    "title": "Veo 3.1 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.1-generate-text2video.md",
+    "title": "Veo 3.1 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-veo-3.1-reverse.md",
+    "title": "Veo 3.1 视频生成 (Reverse)",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-2.0-img2video.md",
+    "title": "Vidu 2.0 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-2.0-reference2video.md",
+    "title": "Vidu 2.0 参考生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-2.0-startend2video.md",
+    "title": "Vidu 2.0 首末帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q1-img2video.md",
+    "title": "Vidu Q1 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q1-reference2video.md",
+    "title": "Vidu Q1 参考生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q1-startend2video.md",
+    "title": "Vidu Q1 首末帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q1-text2video.md",
+    "title": "Vidu Q1 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-pro-fast-img2video.md",
+    "title": "VIDU Q2 Pro Fast 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-pro-fast-startend2video.md",
+    "title": "VIDU Q2 Pro Fast 首尾帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-pro-img2video.md",
+    "title": "VIDU Q2 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-pro-multiframe.md",
+    "title": "VIDU Q2 Pro 智能多帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-pro-startend2video.md",
+    "title": "VIDU Q2 Pro 首尾帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-reference2video.md",
+    "title": "VIDU Q2 参考生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-template2video.md",
+    "title": "VIDU Q2 场景模板",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-text2video.md",
+    "title": "VIDU Q2 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-turbo-img2video.md",
+    "title": "VIDU Q2 Turbo 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-turbo-multiframe.md",
+    "title": "VIDU Q2 Turbo 智能多帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q2-turbo-startend2video.md",
+    "title": "VIDU Q2 Turbo 首尾帧",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q3-pro-i2v.md",
+    "title": "Vidu Q3 Pro 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-vidu-q3-pro-t2v.md",
+    "title": "Vidu Q3 Pro 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-2.2-i2v.md",
+    "title": "Wan 2.2 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-2.2-t2v.md",
+    "title": "Wan 2.2 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-2.5-i2v-preview.md",
+    "title": "Wan 2.5 Preview 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-2.5-t2v-preview.md",
+    "title": "Wan 2.5 Preview 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-i2v.md",
+    "title": "Wan 2.1 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan-t2v.md",
+    "title": "Wan 2.1 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan2.6-i2v.md",
+    "title": "Wan 2.6 图生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan2.6-t2v.md",
+    "title": "Wan 2.6 文生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-wan2.6-v2v.md",
+    "title": "Wan 2.6 参考生视频",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-z-image-turbo.md",
+    "title": "Z Image 文生图 Turbo",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/models/reference-z-image-turbo-lora.md",
+    "title": "Z Image 文生图 Turbo LoRA",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "models"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/providers/anthropic.md",
+    "title": "Anthropic",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "providers"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/providers/gemini.md",
+    "title": "Gemini",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "providers"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/audit-log.md",
+    "title": "审计日志",
+    "description": "审计日志查看和分析指南",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/auto-top-up.md",
+    "title": "自动充值",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/bill.md",
+    "title": "账单管理",
+    "description": "账单查看和管理指南",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/budgets.md",
+    "title": "预算管理",
+    "description": "预算设置和管理指南",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_account.md",
+    "title": "账户与代金券",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_api.md",
+    "title": "API 配置与技术接入",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_billing.md",
+    "title": "充值与计费",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_images.md",
+    "title": "图像与视频生成",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_invoice.md",
+    "title": "发票与合规",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_others.md",
+    "title": "其他常见问题",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/faq_rpm.md",
+    "title": "速率限制与性能",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/payment-methods.md",
+    "title": "支付方式",
+    "description": "支持的支付方式说明",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/quickstart.md",
+    "title": "快速开始",
+    "description": "",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  },
+  {
+    "url": "https://docs.jiekou.ai/docs/support/team.md",
+    "title": "团队管理",
+    "description": "团队创建和管理指南",
+    "source": "llms.txt",
+    "category": {
+      "type": "docs",
+      "subcategory": "support"
+    }
+  }
+]
