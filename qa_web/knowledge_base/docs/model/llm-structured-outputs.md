@@ -1,0 +1,69 @@
+---
+title: "结构化输出（Structured Outputs）"
+url: "https://docs.jiekou.ai/docs/model/llm-structured-outputs.md"
+crawled_at: "2026-02-26T23:31:29.795106"
+---
+
+Published Time: Thu, 26 Feb 2026 15:31:29 GMT
+
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.jiekou.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# 结构化输出（Structured Outputs）
+
+export const StructuredOutputsModels = () => {
+  if (typeof document === "undefined") {
+    return null;
+  } else {
+    let attempts = 0;
+    const maxAttempts = 50;
+    const INIT_DISPLAY_COUNT = 3;
+    const interval = setInterval(() => {
+      const clientComponent = document.getElementById("structured-outputs-models");
+      if (clientComponent && window.jiekouRemoteData.llmModels.status === 'loaded') {
+        const modelList = window.jiekouRemoteData.llmModels.data.filter(model => {
+          return (model.features || []).includes('structured-outputs');
+        });
+        let displayModels = modelList.slice(0, INIT_DISPLAY_COUNT).map(model => {
+          return `*   ${model.id}
+`;
+        }).join('');
+        let showMoreButton = '';
+        if (modelList.length > INIT_DISPLAY_COUNT) {
+          showMoreButton = `展示更多`;
+        }
+        clientComponent.innerHTML = `
+          
+${displayModels}
+
+          ${showMoreButton}
+        `;
+        document.getElementById('show-more-function-call-btn')?.addEventListener('click', () => {
+          clientComponent.innerHTML = `
+            
+${modelList.map(model => { return `*   ${model.id}
+`; }).join('')}
+
+          `;
+        });
+        clearInterval(interval);
+      }
+      attempts++;
+      if (attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 200);
+    return ;
+  }
+};
+
+## 使用场景
+
+Structured Outputs 功能使得模型能够生成符合您提供的 [JSON Schema](https://json-schema.org/specification) 的响应，让生成结果更加可控，易于解析。这一功能既可以方便后续逻辑的解析和处理，也有利于将结果集成到业务系统中，适用于各种自动化和数据处理场景。
+
+## 支持的模型
+
+以下模型支持结构化输出：
+
+ ## 使用方法 在请求中添加以下信息： * **设置参数**：通过`response_format`参数指定您定义的 JSON Schema。 * **提示词指引**：在提示词中指引模型进行结构化输出。 ## 使用示例 下文提供了完整的 Python 代码示例，演示如何使用 Structured Outputs 功能生成符合您提供的 JSON Schema 的 JSON 响应。 ### 1. 初始化客户端 您需要使用您的 JieKou AI API 密钥初始化客户端。 ```python theme={null} from openai import OpenAI client = OpenAI( base_url="https://api.jiekou.ai/openai", api_key="", ) model = "qwen/qwen-2.5-72b-instruct" ``` ### 2. 定义 JSON Schema 您需要定义 JSON Schema。以下示例创建了一个从用户输入中提取费用信息的 JSON Schema。 ```python theme={null} # 定义用于费用跟踪的系统提示。 system_prompt = """You are an expense tracking assistant. Extract expense information from the user's input and format it according to the provided schema.""" # 定义用于结构化响应的 JSON Schema。 response_format = { "type": "json_schema", "json_schema": { "name": "expense_tracking_schema", "schema": { "type": "object", "properties": { "expenses": { "type": "array", "items": { "type": "object", "properties": { "description": { "type": "string", "description": "Description of the expense" }, "amount": { "type": "number", "description": "Amount spent in dollars" }, "date": { "type": "string", "description": "When the expense occurred" }, "category": { "type": "string", "description": "Category of expense (e.g., food, office, travel)" } }, "required": [ "description", "amount" ] } }, "total": { "type": "number", "description": "Total amount of all expenses" } }, "required": [ "expenses", "total" ], }, }, } ``` ### 3. 发起 API 请求 创建 API 请求。此请求包括 `response_format` 参数，指定了上一步中定义的 JSON schema。 ```python theme={null} chat_completion = client.chat.completions.create( model=model, messages=[ { "role": "system", "content": system_prompt, }, { "role": "user", "content": """I spent $120 on dinner at an Italian restaurant last Friday with my colleagues. Also bought office supplies for $45 on Monday.""", }, ], max_tokens=1024, temperature=0.8, stream=False, response_format=response_format, ) response_content = chat_completion.choices[0].message.content # 解析并美化 JSON try: json_response = json.loads(response_content) prettified_json = json.dumps(json_response, indent=2) print(prettified_json) except json.JSONDecodeError: print("Could not parse response as JSON. Raw response:") print(response_content) ``` **输出**： ```json theme={null} { "expenses": [ { "date": "2023-03-17", "description": "Dinner at Italian restaurant", "amount": 120, "category": "Food & Dining" }, { "date": "2023-03-13", "description": "Office supplies", "amount": 45, "category": "Office Supplies" } ], "total": 165 } ``` ## 完整代码 ```python theme={null} from openai import OpenAI import json client = OpenAI( base_url="https://api.jiekou.ai/openai", api_key="", ) model = "qwen/qwen-2.5-72b-instruct" # 使用 JSON Schema 进行结构化输出的示例 # 此示例创建了一个用于提取费用信息的 schema # 定义用于费用跟踪的系统提示 system_prompt = """You are an expense tracking assistant. Extract expense information from the user's input and format it according to the provided schema.""" # 定义用于结构化响应的 JSON schema response_format = { "type": "json_schema", "json_schema": { "name": "expense_tracking_schema", "schema": { "type": "object", "properties": { "expenses": { "type": "array", "items": { "type": "object", "properties": { "description": { "type": "string", "description": "Description of the expense" }, "amount": { "type": "number", "description": "Amount spent in dollars" }, "date": { "type": "string", "description": "When the expense occurred" }, "category": { "type": "string", "description": "Category of expense (e.g., food, office, travel)" } }, "required": [ "description", "amount" ] } }, "total": { "type": "number", "description": "Total amount of all expenses" } }, "required": [ "expenses", "total" ], }, }, } chat_completion = client.chat.completions.create( model=model, messages=[ { "role": "system", "content": system_prompt, }, { "role": "user", "content": """I spent $120 on dinner at an Italian restaurant last Friday with my colleagues. Also bought office supplies for $45 on Monday.""", }, ], max_tokens=1024, temperature=0.8, stream=False, response_format=response_format, ) response_content = chat_completion.choices[0].message.content # 解析并美化 JSON try: json_response = json.loads(response_content) prettified_json = json.dumps(json_response, indent=2) print(prettified_json) except json.JSONDecodeError: print("Could not parse response as JSON. Raw response:") print(response_content) ```

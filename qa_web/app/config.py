@@ -9,7 +9,11 @@ load_dotenv()
 # 项目路径
 BASE_DIR = Path(__file__).parent.parent
 PROJECT_ROOT = BASE_DIR.parent
-KNOWLEDGE_BASE_DIR = PROJECT_ROOT / "knowledge_base"
+
+# 知识库路径（优先使用 qa_web 内的副本，便于部署）
+_kb_in_app = BASE_DIR / "knowledge_base"
+_kb_in_root = PROJECT_ROOT / "knowledge_base"
+KNOWLEDGE_BASE_DIR = _kb_in_app if _kb_in_app.exists() else _kb_in_root
 
 # 数据库
 DATABASE_PATH = BASE_DIR / "data" / "qa.db"
