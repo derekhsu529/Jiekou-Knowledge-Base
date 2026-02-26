@@ -152,6 +152,13 @@
         let currentQaId = null;
         let currentImage = null;  // base64 图片数据
 
+        // HTML 转义函数，防止 XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
         // 粘贴图片处理
         document.addEventListener('paste', async (e) => {
             const items = e.clipboardData?.items;
@@ -247,7 +254,8 @@
                 // 刷新历史记录
                 loadHistory();
 
-                // 清除图片
+                // 清除输入和图片
+                input.value = '';
                 removeImage();
 
             } catch (error) {
@@ -320,8 +328,8 @@
                         <div class="flex items-start">
                             <span class="text-2xl font-bold text-blue-200 mr-4">${data.length - index}</span>
                             <div class="flex-1">
-                                <p class="text-gray-800 font-medium">${record.question}</p>
-                                <p class="text-gray-500 text-sm mt-1 line-clamp-2">${record.answer.substring(0, 100)}...</p>
+                                <p class="text-gray-800 font-medium">${escapeHtml(record.question)}</p>
+                                <p class="text-gray-500 text-sm mt-1 line-clamp-2">${escapeHtml(record.answer.slice(0, 100))}${record.answer.length > 100 ? '...' : ''}</p>
                                 <div class="flex items-center flex-wrap text-xs text-gray-400 mt-2 gap-3">
                                     <span>${record.created_at}</span>
                                     <span>${record.response_time_ms || '-'}ms</span>
@@ -331,7 +339,7 @@
                                             '<span class="text-red-500">👎 没用</span>')
                                         : '<span>未评价</span>'}
                                     ${record.feedback === false && record.feedback_text ?
-                                        '<span class="text-red-400">原因: ' + record.feedback_text + '</span>' : ''}
+                                        '<span class="text-red-400">原因: ' + escapeHtml(record.feedback_text) + '</span>' : ''}
                                 </div>
                             </div>
                         </div>
