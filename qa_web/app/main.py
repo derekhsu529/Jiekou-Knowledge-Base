@@ -29,8 +29,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# 静态文件
-app.mount("/static", StaticFiles(directory=BASE_DIR / "frontend" / "static"), name="static")
+# 静态文件（仅在目录存在时挂载）
+static_dir = BASE_DIR / "frontend" / "static"
+if static_dir.exists():
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 # API 路由
 app.include_router(qa_router, prefix="/api/qa", tags=["问答"])
