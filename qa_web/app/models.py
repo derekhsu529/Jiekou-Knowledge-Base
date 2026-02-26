@@ -8,6 +8,7 @@ from datetime import datetime
 # 请求模型
 class AskRequest(BaseModel):
     question: str
+    image: Optional[str] = None  # base64 编码的图片
 
 
 class FeedbackRequest(BaseModel):

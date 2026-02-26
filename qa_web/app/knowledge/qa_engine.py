@@ -45,29 +45,53 @@ def _get_client() -> Anthropic:
     )
 
 
-def generate_answer(question: str, context: str) -> str:
+def generate_answer(question: str, context: str, image_base64: str = None) -> str:
     """
-    使用 Claude API 生成回答
+    使用 Claude API 生成回答，支持多模态输入
 
     Args:
         question: 用户问题
         context: 知识库上下文
+        image_base64: 可选的 base64 编码图片
 
     Returns:
         AI 生成的回答
     """
     client = _get_client()
 
+    # 构建消息内容
+    content = []
+
+    # 如果有图片，添加图片
+    if image_base64:
+        # 从 data:image/png;base64,xxx 提取
+        if ',' in image_base64:
+            media_type = image_base64.split(';')[0].split(':')[1]
+            data = image_base64.split(',')[1]
+        else:
+            media_type = "image/png"
+            data = image_base64
+
+        content.append({
+            "type": "image",
+            "source": {
+                "type": "base64",
+                "media_type": media_type,
+                "data": data
+            }
+        })
+
+    # 添加文本
+    content.append({
+        "type": "text",
+        "text": f"知识库内容：\n{context}\n\n用户问题：{question}"
+    })
+
     response = client.messages.create(
         model=AI_MODEL,
         max_tokens=2000,
         system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": f"知识库内容：\n{context}\n\n用户问题：{question}"
-            }
-        ]
+        messages=[{"role": "user", "content": content}]
     )
 
     return response.content[0].text

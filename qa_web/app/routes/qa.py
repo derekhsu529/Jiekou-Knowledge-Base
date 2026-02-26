@@ -14,8 +14,8 @@ router = APIRouter()
 @router.post("/ask", response_model=AskResponse)
 async def ask_question(request: AskRequest):
     """提问并获得回答"""
-    if not request.question.strip():
-        raise HTTPException(status_code=400, detail="问题不能为空")
+    if not request.question.strip() and not request.image:
+        raise HTTPException(status_code=400, detail="请输入问题或上传图片")
 
     start_time = time.time()
 
@@ -26,8 +26,8 @@ async def ask_question(request: AskRequest):
         # 2. 获取上下文
         context = get_context_for_qa(search_results)
 
-        # 3. 生成回答
-        answer = generate_answer(request.question, context)
+        # 3. 生成回答（支持图片）
+        answer = generate_answer(request.question, context, image_base64=request.image)
 
         # 4. 计算响应时间
         response_time_ms = int((time.time() - start_time) * 1000)
