@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问答统计 - 接口AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-blue-600">接口AI</span>
+                <span class="text-gray-500">问答统计</span>
+            </div>
+            <a href="/" class="text-gray-600 hover:text-blue-600">返回问答</a>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 概览卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500">总问题数</div>
+                <div id="totalQuestions" class="text-3xl font-bold text-blue-600">-</div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500">收到评价</div>
+                <div id="totalFeedback" class="text-3xl font-bold text-purple-600">-</div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500">有用率</div>
+                <div id="helpfulRate" class="text-3xl font-bold text-green-600">-</div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-sm text-gray-500">平均响应时间</div>
+                <div id="avgResponseTime" class="text-3xl font-bold text-orange-600">-</div>
+            </div>
+        </div>
+
+        <!-- 图表区域 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- 趋势图 -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-4">最近 7 天趋势</h3>
+                <canvas id="trendChart" height="200"></canvas>
+            </div>
+
+            <!-- 评价分布 -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-4">评价分布</h3>
+                <canvas id="feedbackChart" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- 热门问题 -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">热门问题 TOP 10</h3>
+            <div id="hotQuestions" class="space-y-3"></div>
+            <div id="noHotQuestions" class="hidden text-center text-gray-400 py-8">
+                暂无数据
+            </div>
+        </div>
+
+        <!-- 最近记录 -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">最近问答记录</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-gray-600">问题</th>
+                            <th class="px-4 py-3 text-left text-gray-600">时间</th>
+                            <th class="px-4 py-3 text-left text-gray-600">响应</th>
+                            <th class="px-4 py-3 text-left text-gray-600">评价</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentRecords" class="divide-y divide-gray-200"></tbody>
+                </table>
+            </div>
+            <div id="noRecords" class="hidden text-center text-gray-400 py-8">
+                暂无记录
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let trendChart = null;
+        let feedbackChart = null;
+
+        // 加载概览数据
+        async function loadOverview() {
+            try {
+                const response = await fetch('/api/stats/overview');
+                const data = await response.json();
+
+                document.getElementById('totalQuestions').textContent = data.total_questions;
+                document.getElementById('totalFeedback').textContent = data.total_feedback;
+                document.getElementById('helpfulRate').textContent = data.helpful_rate + '%';
+                document.getElementById('avgResponseTime').textContent = (data.avg_response_time_ms / 1000).toFixed(1) + 's';
+
+                // 更新评价分布图
+                updateFeedbackChart(data.helpful_count, data.not_helpful_count);
+
+            } catch (error) {
+                console.error('加载概览失败:', error);
+            }
+        }
+
+        // 加载趋势数据
+        async function loadDailyStats() {
+            try {
+                const response = await fetch('/api/stats/daily?days=7');
+                const data = await response.json();
+
+                updateTrendChart(data.reverse());
+
+            } catch (error) {
+                console.error('加载趋势失败:', error);
+            }
+        }
+
+        // 加载热门问题
+        async function loadHotQuestions() {
+            try {
+                const response = await fetch('/api/stats/hot_questions?limit=10');
+                const data = await response.json();
+
+                const container = document.getElementById('hotQuestions');
+                const noData = document.getElementById('noHotQuestions');
+
+                if (data.length === 0) {
+                    container.classList.add('hidden');
+                    noData.classList.remove('hidden');
+                    return;
+                }
+
+                container.innerHTML = data.map((q, i) => `
+                    <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-lg font-bold text-gray-400">${i + 1}</span>
+                            <span class="text-gray-700">${q.question}</span>
+                        </div>
+                        <span class="text-sm text-gray-500">${q.count} 次</span>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('加载热门问题失败:', error);
+            }
+        }
+
+        // 加载最近记录
+        async function loadRecentRecords() {
+            try {
+                const response = await fetch('/api/qa/history?limit=10');
+                const data = await response.json();
+
+                const tbody = document.getElementById('recentRecords');
+                const noData = document.getElementById('noRecords');
+
+                if (data.length === 0) {
+                    tbody.parentElement.classList.add('hidden');
+                    noData.classList.remove('hidden');
+                    return;
+                }
+
+                tbody.innerHTML = data.map(record => `
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-3 max-w-md truncate">${record.question}</td>
+                        <td class="px-4 py-3 text-gray-500">${record.created_at}</td>
+                        <td class="px-4 py-3 text-gray-500">${record.response_time_ms || '-'}ms</td>
+                        <td class="px-4 py-3">
+                            ${record.feedback === null ? '<span class="text-gray-400">-</span>' :
+                              record.feedback ? '<span class="text-green-500">有用</span>' : '<span class="text-red-500">没用</span>'}
+                        </td>
+                    </tr>
+                `).join('');
+
+            } catch (error) {
+                console.error('加载记录失败:', error);
+            }
+        }
+
+        // 更新趋势图
+        function updateTrendChart(data) {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+
+            if (trendChart) trendChart.destroy();
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.date.substring(5)),
+                    datasets: [{
+                        label: '问题数',
+                        data: data.map(d => d.questions),
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }, {
+                        label: '有用',
+                        data: data.map(d => d.helpful),
+                        borderColor: '#22c55e',
+                        backgroundColor: 'transparent',
+                        tension: 0.3
+                    }, {
+                        label: '没用',
+                        data: data.map(d => d.not_helpful),
+                        borderColor: '#ef4444',
+                        backgroundColor: 'transparent',
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+
+        // 更新评价分布图
+        function updateFeedbackChart(helpful, notHelpful) {
+            const ctx = document.getElementById('feedbackChart').getContext('2d');
+
+            if (feedbackChart) feedbackChart.destroy();
+
+            feedbackChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['有用', '没用'],
+                    datasets: [{
+                        data: [helpful, notHelpful],
+                        backgroundColor: ['#22c55e', '#ef4444']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
+
+        // 页面加载
+        loadOverview();
+        loadDailyStats();
+        loadHotQuestions();
+        loadRecentRecords();
+    </script>
+</body>
+</html>

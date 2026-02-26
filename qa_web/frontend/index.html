@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接口AI 智能客服</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-body h1 { font-size: 1.5em; font-weight: bold; margin: 1em 0 0.5em; }
+        .markdown-body h2 { font-size: 1.3em; font-weight: bold; margin: 1em 0 0.5em; }
+        .markdown-body h3 { font-size: 1.1em; font-weight: bold; margin: 0.8em 0 0.4em; }
+        .markdown-body p { margin: 0.5em 0; }
+        .markdown-body ul, .markdown-body ol { margin: 0.5em 0; padding-left: 1.5em; }
+        .markdown-body li { margin: 0.25em 0; }
+        .markdown-body code { background: #f3f4f6; padding: 0.2em 0.4em; border-radius: 0.25rem; font-size: 0.9em; }
+        .markdown-body pre { background: #1f2937; color: #f9fafb; padding: 1em; border-radius: 0.5rem; overflow-x: auto; margin: 1em 0; }
+        .markdown-body pre code { background: transparent; padding: 0; }
+        .markdown-body table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+        .markdown-body th, .markdown-body td { border: 1px solid #e5e7eb; padding: 0.5em; text-align: left; }
+        .markdown-body th { background: #f9fafb; }
+        .markdown-body a { color: #2563eb; text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-blue-600">接口AI</span>
+                <span class="text-gray-500">智能客服</span>
+                <span class="bg-orange-100 text-orange-600 text-xs px-2 py-0.5 rounded-full">Beta测试</span>
+            </div>
+            <a href="/stats" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">统计分析</a>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- 输入区域 -->
+        <div class="bg-white rounded-lg shadow p-6 mb-6 sticky top-0 z-10">
+            <div class="flex space-x-4">
+                <input
+                    type="text"
+                    id="questionInput"
+                    class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="请输入您的问题，例如：gpt-4o 的价格是多少？"
+                    onkeypress="if(event.key === 'Enter') askQuestion()"
+                >
+                <button
+                    onclick="askQuestion()"
+                    id="askBtn"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                >
+                    发送
+                </button>
+            </div>
+        </div>
+
+        <!-- 回答区域 -->
+        <div id="answerSection" class="hidden">
+            <div class="bg-white rounded-lg shadow p-6 mb-4">
+                <!-- 加载状态 -->
+                <div id="loading" class="hidden text-center py-8">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent"></div>
+                    <p class="mt-2 text-gray-500">正在思考中...</p>
+                </div>
+
+                <!-- 回答内容 -->
+                <div id="answerContent" class="hidden">
+                    <div id="answerText" class="markdown-body text-gray-700"></div>
+
+                    <!-- 参考文档 -->
+                    <div id="matchedDocs" class="mt-6 pt-4 border-t border-gray-200">
+                        <h4 class="text-sm font-medium text-gray-500 mb-2">参考文档：</h4>
+                        <ul id="docsList" class="text-sm space-y-1"></ul>
+                    </div>
+
+                    <!-- 响应时间 -->
+                    <div class="mt-4 text-sm text-gray-400">
+                        响应时间：<span id="responseTime"></span>ms
+                    </div>
+                </div>
+            </div>
+
+            <!-- 评价区域 -->
+            <div id="feedbackSection" class="hidden bg-white rounded-lg shadow p-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-gray-600">这个回答有帮助吗？</span>
+                    <div class="space-x-3">
+                        <button
+                            onclick="submitFeedback(true)"
+                            class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition"
+                        >
+                            👍 有用
+                        </button>
+                        <button
+                            onclick="submitFeedback(false)"
+                            class="px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition"
+                        >
+                            👎 没用
+                        </button>
+                    </div>
+                </div>
+                <div id="feedbackThanks" class="hidden text-center py-2 text-green-600">
+                    感谢您的反馈！
+                </div>
+            </div>
+        </div>
+
+        <!-- 历史记录 -->
+        <div class="mt-8">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">最近问答</h3>
+            <div id="historyList" class="space-y-3"></div>
+        </div>
+    </main>
+
+    <!-- 没用原因弹窗 -->
+    <div id="feedbackModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 w-96">
+            <h3 class="text-lg font-medium mb-4">请告诉我们原因</h3>
+            <textarea id="feedbackReason" class="w-full border border-gray-300 rounded-lg p-3 h-24 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="请输入为什么这个回答没有帮助..."></textarea>
+            <div class="flex justify-end space-x-3 mt-4">
+                <button onclick="closeFeedbackModal()" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition">取消</button>
+                <button onclick="confirmNegativeFeedback()" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">提交</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQaId = null;
+
+        // 提问
+        async function askQuestion() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+            if (!question) return;
+
+            // 显示加载状态
+            document.getElementById('answerSection').classList.remove('hidden');
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('answerContent').classList.add('hidden');
+            document.getElementById('feedbackSection').classList.add('hidden');
+            document.getElementById('askBtn').disabled = true;
+
+            try {
+                const response = await fetch('/api/qa/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question })
+                });
+
+                if (!response.ok) throw new Error('请求失败');
+
+                const data = await response.json();
+                currentQaId = data.id;
+
+                // 显示回答
+                document.getElementById('answerText').innerHTML = marked.parse(data.answer);
+                document.getElementById('responseTime').textContent = data.response_time_ms;
+
+                // 显示参考文档
+                const docsList = document.getElementById('docsList');
+                docsList.innerHTML = data.matched_docs.slice(0, 5).map(doc =>
+                    `<li><a href="${doc.url}" target="_blank" class="text-blue-600 hover:underline">${doc.title}</a></li>`
+                ).join('');
+
+                // 显示内容和评价区域
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('answerContent').classList.remove('hidden');
+                document.getElementById('feedbackSection').classList.remove('hidden');
+                document.getElementById('feedbackThanks').classList.add('hidden');
+
+                // 刷新历史记录
+                loadHistory();
+
+            } catch (error) {
+                alert('发生错误：' + error.message);
+                document.getElementById('loading').classList.add('hidden');
+            }
+
+            document.getElementById('askBtn').disabled = false;
+        }
+
+        // 提交评价
+        async function submitFeedback(isHelpful) {
+            if (!currentQaId) return;
+
+            if (!isHelpful) {
+                // 没用时弹出原因对话框
+                document.getElementById('feedbackModal').classList.remove('hidden');
+                return;
+            }
+
+            await doSubmitFeedback(true, null);
+        }
+
+        function closeFeedbackModal() {
+            document.getElementById('feedbackModal').classList.add('hidden');
+            document.getElementById('feedbackReason').value = '';
+        }
+
+        async function confirmNegativeFeedback() {
+            const reason = document.getElementById('feedbackReason').value.trim();
+            if (!reason) {
+                alert('请填写原因');
+                return;
+            }
+            await doSubmitFeedback(false, reason);
+            closeFeedbackModal();
+        }
+
+        async function doSubmitFeedback(isHelpful, feedbackText) {
+            try {
+                await fetch('/api/qa/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ qa_id: currentQaId, is_helpful: isHelpful, feedback_text: feedbackText })
+                });
+
+                document.getElementById('feedbackThanks').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('feedbackSection').classList.add('hidden');
+                }, 1500);
+
+                // 刷新历史记录
+                loadHistory();
+
+            } catch (error) {
+                console.error('提交评价失败:', error);
+            }
+        }
+
+        // 加载历史记录
+        async function loadHistory() {
+            try {
+                const response = await fetch('/api/qa/history?limit=10');
+                const data = await response.json();
+
+                const historyList = document.getElementById('historyList');
+                historyList.innerHTML = data.map((record, index) => `
+                    <div class="bg-white rounded-lg shadow p-4 cursor-pointer hover:shadow-md transition"
+                         onclick="showHistoryAnswer('${encodeURIComponent(record.question)}', '${encodeURIComponent(record.answer)}')">
+                        <div class="flex items-start">
+                            <span class="text-2xl font-bold text-blue-200 mr-4">${data.length - index}</span>
+                            <div class="flex-1">
+                                <p class="text-gray-800 font-medium">${record.question}</p>
+                                <p class="text-gray-500 text-sm mt-1 line-clamp-2">${record.answer.substring(0, 100)}...</p>
+                                <div class="flex items-center flex-wrap text-xs text-gray-400 mt-2 gap-3">
+                                    <span>${record.created_at}</span>
+                                    <span>${record.response_time_ms || '-'}ms</span>
+                                    ${record.feedback !== null ?
+                                        (record.feedback ?
+                                            '<span class="text-green-500">👍 有用</span>' :
+                                            '<span class="text-red-500">👎 没用</span>')
+                                        : '<span>未评价</span>'}
+                                    ${record.feedback === false && record.feedback_text ?
+                                        '<span class="text-red-400">原因: ' + record.feedback_text + '</span>' : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('加载历史记录失败:', error);
+            }
+        }
+
+        // 显示历史回答
+        function showHistoryAnswer(question, answer) {
+            document.getElementById('questionInput').value = decodeURIComponent(question);
+            document.getElementById('answerSection').classList.remove('hidden');
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('answerContent').classList.remove('hidden');
+            document.getElementById('feedbackSection').classList.add('hidden');
+            document.getElementById('answerText').innerHTML = marked.parse(decodeURIComponent(answer));
+            document.getElementById('matchedDocs').classList.add('hidden');
+        }
+
+        // 页面加载时获取历史记录
+        loadHistory();
+    </script>
+</body>
+</html>
