@@ -15,8 +15,12 @@ _kb_in_app = BASE_DIR / "knowledge_base"
 _kb_in_root = PROJECT_ROOT / "knowledge_base"
 KNOWLEDGE_BASE_DIR = _kb_in_app if _kb_in_app.exists() else _kb_in_root
 
-# 数据库
-DATABASE_PATH = BASE_DIR / "data" / "qa.db"
+# 数据库 - 优先使用 Railway Volume 路径
+VOLUME_DATA_PATH = Path("/app/data")
+if VOLUME_DATA_PATH.exists():
+    DATABASE_PATH = VOLUME_DATA_PATH / "qa.db"
+else:
+    DATABASE_PATH = BASE_DIR / "data" / "qa.db"  # 本地开发
 
 # AI API 配置
 API_KEY = os.getenv("API_KEY", os.getenv("PPIO_API_KEY", ""))  # 兼容旧环境变量
