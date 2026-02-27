@@ -150,20 +150,28 @@ def search_knowledge_base(query: str, max_docs: int = 8) -> List[SearchResult]:
 
 def _extract_title_from_content(path: str, preview: str) -> str:
     """从文档内容中提取标题"""
-    # 先尝试从预览内容中找 # 开头的标题行
-    for line in preview.split('\n'):
-        line = line.strip()
-        if line.startswith('#'):
-            # 去掉 # 符号
-            title = line.lstrip('#').strip()
+    lines = preview.split('\n')
+
+    # 先尝试找 # 开头的标题行，或 === 下划线标题
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        # # 开头的标题
+        if stripped.startswith('#'):
+            title = stripped.lstrip('#').strip()
             if title:
                 return title
+        # 检查下一行是否是 === 或 ---（Markdown setext 标题格式）
+        if i + 1 < len(lines):
+            next_line = lines[i + 1].strip()
+            if next_line and (next_line.startswith('===') or next_line.startswith('---')):
+                if stripped and not stripped.startswith('```'):
+                    return stripped
 
     # 如果没找到标题，取第一行非空文本
-    for line in preview.split('\n'):
-        line = line.strip()
-        if line and not line.startswith('---') and not line.startswith('```'):
-            return line[:60] + ('...' if len(line) > 60 else '')
+    for line in lines:
+        stripped = line.strip()
+        if stripped and not stripped.startswith('===') and not stripped.startswith('---') and not stripped.startswith('```'):
+            return stripped[:60] + ('...' if len(stripped) > 60 else '')
 
     # 最后使用文件名
     filename = path.replace("\\", "/").split("/")[-1].rsplit(".", 1)[0]
