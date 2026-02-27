@@ -19,8 +19,8 @@ KNOWLEDGE_BASE_DIR = _kb_in_app if _kb_in_app.exists() else _kb_in_root
 DATABASE_PATH = BASE_DIR / "data" / "qa.db"
 
 # AI API 配置
-PPIO_API_KEY = os.getenv("PPIO_API_KEY", "")
-ANTHROPIC_BASE_URL = os.getenv("ANTHROPIC_BASE_URL", "https://api.ppinfra.com/anthropic")
+API_KEY = os.getenv("API_KEY", os.getenv("PPIO_API_KEY", ""))  # 兼容旧环境变量
+ANTHROPIC_BASE_URL = os.getenv("ANTHROPIC_BASE_URL", "https://api.jiekou.ai/anthropic")
 AI_MODEL = os.getenv("AI_MODEL", "claude-sonnet-4-5-20250929")
 
 # 服务器配置

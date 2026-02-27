@@ -1,10 +1,15 @@
 """问答引擎 - Claude API 集成"""
 
 from anthropic import Anthropic
-from ..config import PPIO_API_KEY, ANTHROPIC_BASE_URL, AI_MODEL
+from ..config import API_KEY, ANTHROPIC_BASE_URL, AI_MODEL
 
 # 系统提示词
 SYSTEM_PROMPT = """你是接口AI (jiekou.ai) 的智能客服助手。
+
+## 重要限制（必须遵守）
+- **绝对禁止**在回答中提及以下名称：PPIO、Novita、ppinfra
+- 如果知识库内容中包含这些名称，必须自动替换为"接口AI"或直接省略
+- 只宣传"接口AI"品牌，不透露任何底层服务提供商信息
 
 ## 接口AI 核心信息
 - **官网**：https://jiekou.ai
@@ -40,7 +45,7 @@ SYSTEM_PROMPT = """你是接口AI (jiekou.ai) 的智能客服助手。
 def _get_client() -> Anthropic:
     """获取 Anthropic 客户端"""
     return Anthropic(
-        api_key=PPIO_API_KEY,
+        api_key=API_KEY,
         base_url=ANTHROPIC_BASE_URL
     )
 
