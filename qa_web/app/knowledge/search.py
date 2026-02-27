@@ -132,16 +132,42 @@ def search_knowledge_base(query: str, max_docs: int = 8) -> List[SearchResult]:
                     content_preview = f.read()[:500]
             top_docs.append((0, page, content_preview))
 
-    return [
-        SearchResult(
-            title=doc["title"],
+    results = []
+    for score, doc, preview in top_docs:
+        title = doc.get("title", "").strip()
+        # 如果标题为空或是 Untitled，从内容中提取标题
+        if not title or title.lower() == "untitled":
+            title = _extract_title_from_content(doc["path"], preview)
+        results.append(SearchResult(
+            title=title,
             path=doc["path"],
             url=doc.get("url", ""),
             score=score,
             content_preview=preview
-        )
-        for score, doc, preview in top_docs
-    ]
+        ))
+    return results
+
+
+def _extract_title_from_content(path: str, preview: str) -> str:
+    """从文档内容中提取标题"""
+    # 先尝试从预览内容中找 # 开头的标题行
+    for line in preview.split('\n'):
+        line = line.strip()
+        if line.startswith('#'):
+            # 去掉 # 符号
+            title = line.lstrip('#').strip()
+            if title:
+                return title
+
+    # 如果没找到标题，取第一行非空文本
+    for line in preview.split('\n'):
+        line = line.strip()
+        if line and not line.startswith('---') and not line.startswith('```'):
+            return line[:60] + ('...' if len(line) > 60 else '')
+
+    # 最后使用文件名
+    filename = path.replace("\\", "/").split("/")[-1].rsplit(".", 1)[0]
+    return filename.replace("_", " ").replace("-", " ").title()
 
 
 def get_context_for_qa(results: List[SearchResult]) -> str:
