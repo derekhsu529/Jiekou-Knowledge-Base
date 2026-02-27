@@ -67,6 +67,17 @@ async def save_feedback(qa_id: int, is_helpful: bool, feedback_text: Optional[st
         return cursor.lastrowid
 
 
+async def delete_qa_record(qa_id: int) -> bool:
+    """删除问答记录及其关联的评价"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        # 先删除关联的评价
+        await db.execute("DELETE FROM feedbacks WHERE qa_id = ?", (qa_id,))
+        # 再删除问答记录
+        cursor = await db.execute("DELETE FROM qa_records WHERE id = ?", (qa_id,))
+        await db.commit()
+        return cursor.rowcount > 0
+
+
 async def get_qa_history(limit: int = 20, offset: int = 0) -> List[Dict]:
     """获取问答历史记录"""
     async with aiosqlite.connect(DATABASE_PATH) as db:

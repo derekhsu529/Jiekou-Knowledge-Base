@@ -4,7 +4,7 @@ import time
 from typing import List
 from fastapi import APIRouter, HTTPException
 from ..models import AskRequest, AskResponse, FeedbackRequest, FeedbackResponse, QARecord, MatchedDoc
-from ..database import save_qa_record, save_feedback, get_qa_history
+from ..database import save_qa_record, save_feedback, get_qa_history, delete_qa_record
 from ..knowledge import search_knowledge_base, generate_answer
 from ..knowledge.search import get_context_for_qa
 
@@ -84,3 +84,17 @@ async def submit_feedback(request: FeedbackRequest):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"保存评价时发生错误: {str(e)}")
+
+
+@router.delete("/record/{qa_id}")
+async def delete_record(qa_id: int):
+    """删除问答记录"""
+    try:
+        success = await delete_qa_record(qa_id)
+        if not success:
+            raise HTTPException(status_code=404, detail="记录不存在")
+        return {"success": True, "message": "删除成功"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"删除失败: {str(e)}")
