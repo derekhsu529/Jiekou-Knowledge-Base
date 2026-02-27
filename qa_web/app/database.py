@@ -55,6 +55,24 @@ async def init_db():
 
         await db.commit()
 
+        # 如果手工知识库为空，自动导入默认 FAQ 数据
+        cursor = await db.execute("SELECT COUNT(*) FROM manual_kb")
+        count = (await cursor.fetchone())[0]
+        if count == 0:
+            await _seed_manual_kb(db)
+
+
+async def _seed_manual_kb(db):
+    """自动填充默认 FAQ 数据（仅在表为空时调用）"""
+    from .import_faq import FAQ_DATA
+    for faq in FAQ_DATA:
+        await db.execute(
+            "INSERT INTO manual_kb (category, question, answer) VALUES (?, ?, ?)",
+            (faq["category"], faq["question"], faq["answer"])
+        )
+    await db.commit()
+    print(f"自动导入 {len(FAQ_DATA)} 条 FAQ 到手工知识库")
+
 
 async def save_qa_record(question: str, answer: str, matched_docs: List[Dict],
                          response_time_ms: int) -> int:
