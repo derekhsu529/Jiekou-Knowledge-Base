@@ -78,6 +78,32 @@
             </div>
             </div>
         </div>
+
+        <!-- 评价横幅 - 固定在头部下方 -->
+        <div id="feedbackSection" class="hidden max-w-4xl mx-auto px-4">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-600 py-2 px-4 rounded-b-lg shadow-md">
+                <div class="flex items-center justify-between">
+                    <span class="text-white font-medium text-sm">这个回答对您有帮助吗？</span>
+                    <div class="space-x-2">
+                        <button
+                            onclick="submitFeedback(true)"
+                            class="px-4 py-1.5 bg-white text-green-600 rounded-lg hover:bg-green-50 transition font-medium text-sm shadow-sm"
+                        >
+                            👍 有用
+                        </button>
+                        <button
+                            onclick="submitFeedback(false)"
+                            class="px-4 py-1.5 bg-white text-orange-600 rounded-lg hover:bg-orange-50 transition font-medium text-sm shadow-sm"
+                        >
+                            ✏️ 需改进
+                        </button>
+                    </div>
+                </div>
+                <div id="feedbackThanks" class="hidden text-center py-1 text-white font-medium text-sm">
+                    感谢您的反馈！
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 主内容 -->
@@ -85,30 +111,6 @@
         <!-- 回答区域 -->
         <div id="answerSection" class="hidden">
             <div class="bg-white rounded-lg shadow overflow-hidden">
-                <!-- 评价横幅 - 放在顶部更醒目 -->
-                <div id="feedbackSection" class="hidden bg-gradient-to-r from-blue-500 to-blue-600 p-4">
-                    <div class="flex items-center justify-between">
-                        <span class="text-white font-medium">这个回答对您有帮助吗？请评价一下</span>
-                        <div class="space-x-3">
-                            <button
-                                onclick="submitFeedback(true)"
-                                class="px-5 py-2 bg-white text-green-600 rounded-lg hover:bg-green-50 transition font-medium shadow-sm"
-                            >
-                                👍 有用
-                            </button>
-                            <button
-                                onclick="submitFeedback(false)"
-                                class="px-5 py-2 bg-white text-orange-600 rounded-lg hover:bg-orange-50 transition font-medium shadow-sm"
-                            >
-                                ✏️ 需改进
-                            </button>
-                        </div>
-                    </div>
-                    <div id="feedbackThanks" class="hidden text-center py-2 text-white font-medium">
-                        感谢您的反馈！
-                    </div>
-                </div>
-
                 <!-- 加载状态 -->
                 <div id="loading" class="hidden text-center py-8">
                     <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent"></div>
