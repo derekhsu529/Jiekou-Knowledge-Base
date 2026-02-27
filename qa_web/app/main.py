@@ -7,7 +7,7 @@ from fastapi.responses import FileResponse
 from pathlib import Path
 
 from .database import init_db
-from .routes import qa_router, stats_router
+from .routes import qa_router, stats_router, manual_kb_router
 
 BASE_DIR = Path(__file__).parent.parent
 
@@ -37,6 +37,7 @@ if static_dir.exists():
 # API 路由
 app.include_router(qa_router, prefix="/api/qa", tags=["问答"])
 app.include_router(stats_router, prefix="/api/stats", tags=["统计"])
+app.include_router(manual_kb_router, prefix="/api/manual-kb", tags=["手工知识库"])
 
 
 @app.get("/")
@@ -49,6 +50,12 @@ async def serve_index():
 async def serve_stats():
     """统计页面"""
     return FileResponse(BASE_DIR / "frontend" / "stats.html")
+
+
+@app.get("/manual-kb")
+async def serve_manual_kb():
+    """手工知识库管理页面"""
+    return FileResponse(BASE_DIR / "frontend" / "manual_kb.html")
 
 
 if __name__ == "__main__":

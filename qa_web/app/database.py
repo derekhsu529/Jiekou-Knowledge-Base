@@ -36,9 +36,22 @@ async def init_db():
             )
         """)
 
+        # 手工知识库表
+        await db.execute("""
+            CREATE TABLE IF NOT EXISTS manual_kb (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                category TEXT NOT NULL,
+                question TEXT NOT NULL,
+                answer TEXT NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+
         # 创建索引
         await db.execute("CREATE INDEX IF NOT EXISTS idx_qa_created_at ON qa_records(created_at)")
         await db.execute("CREATE INDEX IF NOT EXISTS idx_feedbacks_qa_id ON feedbacks(qa_id)")
+        await db.execute("CREATE INDEX IF NOT EXISTS idx_manual_kb_category ON manual_kb(category)")
 
         await db.commit()
 
@@ -166,3 +179,90 @@ async def get_hot_questions(limit: int = 10) -> List[Dict]:
 
         rows = await cursor.fetchall()
         return [{"question": row[0], "count": row[1], "last_asked": row[2]} for row in rows]
+
+
+# ============ 手工知识库 CRUD ============
+
+async def get_manual_kb_list(category: Optional[str] = None) -> List[Dict]:
+    """获取手工知识库条目列表"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        db.row_factory = aiosqlite.Row
+        if category:
+            cursor = await db.execute(
+                "SELECT * FROM manual_kb WHERE category = ? ORDER BY category, id",
+                (category,)
+            )
+        else:
+            cursor = await db.execute("SELECT * FROM manual_kb ORDER BY category, id")
+        rows = await cursor.fetchall()
+        return [dict(row) for row in rows]
+
+
+async def get_manual_kb_categories() -> List[str]:
+    """获取所有分类"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        cursor = await db.execute(
+            "SELECT DISTINCT category FROM manual_kb ORDER BY category"
+        )
+        rows = await cursor.fetchall()
+        return [row[0] for row in rows]
+
+
+async def create_manual_kb_entry(category: str, question: str, answer: str) -> int:
+    """新增手工知识库条目，返回 ID"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        cursor = await db.execute(
+            "INSERT INTO manual_kb (category, question, answer) VALUES (?, ?, ?)",
+            (category, question, answer)
+        )
+        await db.commit()
+        return cursor.lastrowid
+
+
+async def update_manual_kb_entry(entry_id: int, category: str, question: str, answer: str) -> bool:
+    """更新手工知识库条目"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        cursor = await db.execute(
+            "UPDATE manual_kb SET category = ?, question = ?, answer = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+            (category, question, answer, entry_id)
+        )
+        await db.commit()
+        return cursor.rowcount > 0
+
+
+async def delete_manual_kb_entry(entry_id: int) -> bool:
+    """删除手工知识库条目"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        cursor = await db.execute("DELETE FROM manual_kb WHERE id = ?", (entry_id,))
+        await db.commit()
+        return cursor.rowcount > 0
+
+
+async def search_manual_kb(keywords: set) -> List[Dict]:
+    """搜索手工知识库，返回匹配的条目"""
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        db.row_factory = aiosqlite.Row
+        cursor = await db.execute("SELECT * FROM manual_kb")
+        rows = await cursor.fetchall()
+
+        results = []
+        for row in rows:
+            row_dict = dict(row)
+            q_lower = row_dict["question"].lower()
+            a_lower = row_dict["answer"].lower()
+            cat_lower = row_dict["category"].lower()
+
+            score = 0
+            for kw in keywords:
+                if kw in q_lower:
+                    score += 5  # 问题匹配权重最高
+                if kw in cat_lower:
+                    score += 3
+                score += min(a_lower.count(kw), 3)
+
+            if score > 0:
+                row_dict["score"] = score
+                results.append(row_dict)
+
+        results.sort(key=lambda x: x["score"], reverse=True)
+        return results

@@ -1,10 +1,11 @@
 """知识库搜索模块 - 基于 test_qa.py 提取"""
 
 import json
+import sqlite3
 from pathlib import Path
 from typing import List, Dict
 from dataclasses import dataclass
-from ..config import KNOWLEDGE_BASE_DIR
+from ..config import KNOWLEDGE_BASE_DIR, DATABASE_PATH
 
 # 同义词/相关词映射表
 SYNONYMS = {
@@ -145,7 +146,14 @@ def search_knowledge_base(query: str, max_docs: int = 8) -> List[SearchResult]:
             score=score,
             content_preview=preview
         ))
-    return results
+
+    # 合并手工知识库搜索结果
+    manual_results = _search_manual_kb(keywords)
+    results.extend(manual_results)
+
+    # 按分数重新排序，取 top max_docs
+    results.sort(key=lambda x: x.score, reverse=True)
+    return results[:max_docs]
 
 
 def _extract_title_from_content(path: str, preview: str) -> str:
@@ -178,14 +186,60 @@ def _extract_title_from_content(path: str, preview: str) -> str:
     return filename.replace("_", " ").replace("-", " ").title()
 
 
+def _search_manual_kb(keywords: set) -> List[SearchResult]:
+    """搜索手工知识库（同步，用于与文件知识库合并）"""
+    if not DATABASE_PATH.exists():
+        return []
+
+    results = []
+    try:
+        conn = sqlite3.connect(str(DATABASE_PATH))
+        conn.row_factory = sqlite3.Row
+        cursor = conn.execute("SELECT * FROM manual_kb")
+        rows = cursor.fetchall()
+        conn.close()
+    except Exception:
+        return []
+
+    for row in rows:
+        q_lower = row["question"].lower()
+        a_lower = row["answer"].lower()
+        cat_lower = row["category"].lower()
+
+        score = 0
+        for kw in keywords:
+            if kw in q_lower:
+                score += 5
+            if kw in cat_lower:
+                score += 3
+            score += min(a_lower.count(kw), 3)
+
+        if score > 0:
+            # 手工知识库额外加权
+            results.append(SearchResult(
+                title=f"[FAQ] {row['question']}",
+                path=f"manual_kb:{row['id']}",
+                url="",
+                score=score + 10,  # 手工知识库优先
+                content_preview=row["answer"][:500]
+            ))
+
+    results.sort(key=lambda x: x.score, reverse=True)
+    return results
+
+
 def get_context_for_qa(results: List[SearchResult]) -> str:
     """将搜索结果转换为问答上下文"""
     contents = []
     for result in results:
-        doc_path = KNOWLEDGE_BASE_DIR / result.path
-        if doc_path.exists():
-            with open(doc_path, encoding='utf-8') as f:
-                content = f.read()
-                contents.append(f"### {result.title}\nURL: {result.url}\n{content[:3000]}")
+        if result.path.startswith("manual_kb:"):
+            # 手工知识库条目，内容已在 content_preview 中
+            contents.append(f"### {result.title}\n{result.content_preview}")
+        else:
+            doc_path = KNOWLEDGE_BASE_DIR / result.path
+            if doc_path.exists():
+                with open(doc_path, encoding='utf-8') as f:
+                    content = f.read()
+                    contents.append(f"### {result.title}\nURL: {result.url}\n{content[:3000]}")
 
     return "\n\n---\n\n".join(contents)
