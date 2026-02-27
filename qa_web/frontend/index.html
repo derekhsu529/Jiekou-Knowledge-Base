@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>接口AI 智能客服</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Markdown 渲染库 - 多 CDN 备用 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        if (typeof marked === 'undefined') {
+            document.write('<script src="https://unpkg.com/marked/marked.min.js"><\/script>');
+        }
+    </script>
+    <script>
+        // 最终降级：如果所有 CDN 都失败，使用纯文本显示
+        if (typeof marked === 'undefined') {
+            window.marked = { parse: function(text) { return text.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); } };
+        }
+    </script>
     <style>
         .markdown-body h1 { font-size: 1.5em; font-weight: bold; margin: 1em 0 0.5em; }
         .markdown-body h2 { font-size: 1.3em; font-weight: bold; margin: 1em 0 0.5em; }
