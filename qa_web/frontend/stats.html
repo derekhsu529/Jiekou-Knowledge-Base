@@ -65,24 +65,41 @@
             </div>
         </div>
 
-        <!-- 最近记录 -->
+        <!-- 历史问题 -->
         <div class="bg-white rounded-lg shadow p-6">
-            <h3 class="text-lg font-medium text-gray-700 mb-4">最近问答记录</h3>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-4 py-3 text-left text-gray-600">问题</th>
-                            <th class="px-4 py-3 text-left text-gray-600">时间</th>
-                            <th class="px-4 py-3 text-left text-gray-600">响应</th>
-                            <th class="px-4 py-3 text-left text-gray-600">评价</th>
-                        </tr>
-                    </thead>
-                    <tbody id="recentRecords" class="divide-y divide-gray-200"></tbody>
-                </table>
+            <!-- 标题栏 -->
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-medium text-gray-700">历史问题</h3>
+                <div class="flex items-center space-x-4 text-sm">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-500">每页</span>
+                        <select id="pageSize" onchange="changePageSize()" class="border border-gray-300 rounded px-2 py-1 text-gray-700">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                        <span class="text-gray-500">条</span>
+                    </div>
+                    <span id="historyTotalCount" class="text-gray-500">共 - 条</span>
+                </div>
             </div>
-            <div id="noRecords" class="hidden text-center text-gray-400 py-8">
-                暂无记录
+
+            <!-- 列表 -->
+            <div id="historyList" class="divide-y divide-gray-100"></div>
+
+            <!-- 分页控件 -->
+            <div id="pagination" class="hidden flex justify-center items-center space-x-4 mt-4 pt-4 border-t text-sm">
+                <button onclick="prevPage()" id="prevBtn" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded transition disabled:opacity-50 disabled:cursor-not-allowed">
+                    &lt; 上一页
+                </button>
+                <span class="text-gray-600">第 <span id="currentPage">1</span> 页 / 共 <span id="totalPages">1</span> 页</span>
+                <button onclick="nextPage()" id="nextBtn" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded transition disabled:opacity-50 disabled:cursor-not-allowed">
+                    下一页 &gt;
+                </button>
+            </div>
+
+            <div id="noHistory" class="hidden text-center text-gray-400 py-8">
+                暂无历史记录
             </div>
         </div>
     </main>
@@ -106,6 +123,7 @@
 
                 document.getElementById('totalQuestions').textContent = data.total_questions;
                 document.getElementById('totalFeedback').textContent = data.total_feedback;
+                totalRecords = data.total_questions;  // 用于历史问题分页
                 document.getElementById('helpfulRate').textContent = data.helpful_rate + '%';
                 document.getElementById('avgResponseTime').textContent = (data.avg_response_time_ms / 1000).toFixed(1) + 's';
 
@@ -160,36 +178,110 @@
             }
         }
 
-        // 加载最近记录
-        async function loadRecentRecords() {
+        // 历史问题分页
+        let currentPage = 1;
+        let pageSize = 10;
+        let totalRecords = 0;
+
+        // 加载历史问题
+        async function loadHistoryPage() {
             try {
-                const response = await fetch('/api/qa/history?limit=10');
+                const offset = (currentPage - 1) * pageSize;
+                const response = await fetch(`/api/qa/history?limit=${pageSize}&offset=${offset}`);
                 const data = await response.json();
 
-                const tbody = document.getElementById('recentRecords');
-                const noData = document.getElementById('noRecords');
+                const container = document.getElementById('historyList');
+                const noData = document.getElementById('noHistory');
+                const pagination = document.getElementById('pagination');
 
-                if (data.length === 0) {
-                    tbody.parentElement.classList.add('hidden');
+                if (data.length === 0 && currentPage === 1) {
+                    container.innerHTML = '';
+                    pagination.classList.add('hidden');
                     noData.classList.remove('hidden');
                     return;
                 }
 
-                tbody.innerHTML = data.map(record => `
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-4 py-3 max-w-md truncate">${escapeHtml(record.question)}</td>
-                        <td class="px-4 py-3 text-gray-500">${record.created_at}</td>
-                        <td class="px-4 py-3 text-gray-500">${record.response_time_ms || '-'}ms</td>
-                        <td class="px-4 py-3">
-                            ${record.feedback === null ? '<span class="text-gray-400">-</span>' :
-                              record.feedback ? '<span class="text-green-500">有用</span>' : '<span class="text-red-500">没用</span>'}
-                        </td>
-                    </tr>
+                noData.classList.add('hidden');
+                pagination.classList.remove('hidden');
+
+                // 计算序号起始值（倒序显示）
+                const startIndex = offset + 1;
+
+                container.innerHTML = data.map((record, i) => `
+                    <div class="flex items-center py-2 hover:bg-gray-50 text-sm">
+                        <span class="w-10 text-gray-400 text-right mr-3">${startIndex + i}</span>
+                        <span class="flex-1 text-gray-700 truncate" title="${escapeHtml(record.question)}">${escapeHtml(record.question)}</span>
+                        <span class="w-20 text-gray-400 text-right">${formatTime(record.created_at)}</span>
+                        <span class="w-16 text-gray-400 text-right">${((record.response_time_ms || 0) / 1000).toFixed(1)}s</span>
+                        <span class="w-20 text-right ${getFeedbackColor(record.feedback)}">${getFeedbackText(record.feedback)}</span>
+                    </div>
                 `).join('');
 
+                updatePagination();
+
             } catch (error) {
-                console.error('加载记录失败:', error);
+                console.error('加载历史记录失败:', error);
             }
+        }
+
+        // 格式化时间显示
+        function formatTime(dateStr) {
+            const date = new Date(dateStr);
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const yesterday = new Date(today.getTime() - 86400000);
+
+            if (date >= today) {
+                return date.toTimeString().slice(0, 5);
+            } else if (date >= yesterday) {
+                return '昨天';
+            } else {
+                return (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0');
+            }
+        }
+
+        // 获取评价颜色
+        function getFeedbackColor(feedback) {
+            if (feedback === null) return 'text-gray-400';
+            return feedback ? 'text-green-500' : 'text-orange-500';
+        }
+
+        // 获取评价文本
+        function getFeedbackText(feedback) {
+            if (feedback === null) return '未评价';
+            return feedback ? '👍 有用' : '✏️ 需改进';
+        }
+
+        // 更新分页状态
+        function updatePagination() {
+            const totalPages = Math.ceil(totalRecords / pageSize) || 1;
+            document.getElementById('currentPage').textContent = currentPage;
+            document.getElementById('totalPages').textContent = totalPages;
+            document.getElementById('historyTotalCount').textContent = `共 ${totalRecords} 条`;
+
+            document.getElementById('prevBtn').disabled = currentPage <= 1;
+            document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadHistoryPage();
+            }
+        }
+
+        function nextPage() {
+            const totalPages = Math.ceil(totalRecords / pageSize);
+            if (currentPage < totalPages) {
+                currentPage++;
+                loadHistoryPage();
+            }
+        }
+
+        function changePageSize() {
+            pageSize = parseInt(document.getElementById('pageSize').value);
+            currentPage = 1;
+            loadHistoryPage();
         }
 
         // 更新趋势图
@@ -254,10 +346,9 @@
         }
 
         // 页面加载
-        loadOverview();
+        loadOverview().then(() => loadHistoryPage());  // 先加载概览获取总数，再加载历史
         loadDailyStats();
         loadHotQuestions();
-        loadRecentRecords();
     </script>
 </body>
 </html>
