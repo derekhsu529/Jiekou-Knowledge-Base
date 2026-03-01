@@ -101,11 +101,13 @@ def generate_answer(question: str, context: str, image_base64: str = None) -> st
         "text": f"知识库内容：\n{context}\n\n用户问题：{question}"
     })
 
-    response = client.messages.create(
-        model=AI_MODEL,
-        max_tokens=2000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": content}]
-    )
-
-    return response.content[0].text
+    try:
+        response = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=2000,
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": content}]
+        )
+        return response.content[0].text
+    except Exception as e:
+        raise RuntimeError(f"AI 服务暂时不可用: {e}")
