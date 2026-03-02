@@ -99,11 +99,16 @@ def _get_tavily_client() -> Optional['TavilyClient']:
 
 async def _search_tavily_async(query: str) -> List[SearchResult]:
     """使用 Tavily 搜索网络资源（异步版本，带容错）"""
+    import logging
+    logger = logging.getLogger(__name__)
+
     client = _get_tavily_client()
     if not client:
+        logger.warning("Tavily 客户端未初始化")
         return []
 
     try:
+        logger.info(f"🔍 开始 Tavily 搜索: {query[:50]}...")
         # 使用 asyncio.to_thread 将同步调用转为异步
         import asyncio
         response = await asyncio.to_thread(
@@ -139,11 +144,12 @@ async def _search_tavily_async(query: str) -> List[SearchResult]:
                 content_preview=item.get('content', '')[:500]
             ))
 
+        logger.info(f"✅ Tavily 搜索成功: 返回 {len(results)} 个结果")
         return results
 
     except Exception as e:
         # 静默失败，不影响本地搜索
-        print(f"⚠️  Tavily 搜索失败: {e}")
+        logger.error(f"❌ Tavily 搜索失败: {e}", exc_info=True)
         return []
 
 
